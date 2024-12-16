@@ -1,0 +1,246 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style type="text/css">
+			
+			.fon{
+				background-image: url(5.jpg);
+				background-size: 100% 100%;
+				width: 100%;
+				height: 1000px;  
+			}
+
+			.main{
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 4;
+			}
+
+
+
+			.box1{
+				background-image: url(1.jpg); 
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				position: absolute;
+				top: 340px;
+				left: 600px;
+				transition: 3s;
+			}
+
+
+
+			.box2{
+				background-image: url(2.jpg); 
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				top: 340px;
+				left: 1180px;
+				position: absolute;
+				transition: 3s;
+				
+			}
+
+
+			.box3{
+				background-image: url(3.jpg);
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				top: 340px;
+				left: 900px;
+				position: absolute;
+				transition: 3s; 
+			}
+
+			.box4{
+				background-image: url(4.jpg);
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				top: 590px;
+				left: 1180px;
+				position: absolute;
+				transition: 3s; 
+			}
+
+			.box5{
+				background-image: url(7.jpg);
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				top: 590px;
+				left: 900px;
+				position: absolute;
+				transition: 3s; 
+			}
+
+			.box6{
+				background-image: url(6.jpg);
+				background-size: 100% 100%;
+				height: 200px;
+				width: 200px;
+				top: 590px;
+				left: 600px;
+				position: absolute;
+				transition: 3s; 
+				
+			}
+
+			.box7{
+				background-image: url(8.jpg);
+				background-size: 100% 100%;
+				height: 500px;
+				width: 500px;
+				margin-left: 750px;
+				width: 250px;
+				height: 250px;
+				margin-top: -180px;
+				display: none;
+			}
+			.box8{
+				background-image: url(9.jpg);
+				background-size: 100% 100%;
+				height: 500px;
+				width: 500px;
+				margin-left: 750px;
+				width: 250px;
+				height: 250px;
+				margin-top: -180px;
+				display: none;
+			}
+
+
+		</style>
+	</head>
+	<body>
+
+
+
+	<div class="fon"> 
+		<div  > 
+			<h4 style="font-size: 50px;margin-left: 100px;color: white;">Найди:Неймара</h4>
+			<h3 style="color: white; margin-left: 50px;">Осталось попыток: <span class="text">2</span></h3> 
+			<button class="btn">Перемешать</button>
+			<div class="box7"></div>
+			<div class="box8"> </div>
+			<div class="main"> 
+				<div class="box1"> 
+				</div>
+
+				<div class="box2 ">  
+				</div>
+
+				<div class="box3">  
+				</div>
+
+				<div class="box4"> 
+		 		</div>
+				<div class="box5"> 
+		 		</div>
+				<div class="box6"> 
+		 		</div>  
+			</div>
+			
+
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let x = 2
+	 document.querySelector(".btn").onclick = function(){
+	 		document.querySelector(".box2").style.left = "900px"	
+			document.querySelector(".box3").style.left = "1200px"
+			document.querySelector(".box1").style.top = "590px"	
+			document.querySelector(".box4").style.left = "900px"
+			document.querySelector(".box5").style.left = "1200px"	
+			document.querySelector(".box6").style.top = "330px"
+			document.querySelector(".box2").style.background = "black"	
+			document.querySelector(".box3").style.background = "black"
+			document.querySelector(".box1").style.background = "black"	
+			document.querySelector(".box4").style.background = "black"	
+			document.querySelector(".box5").style.background = "black"	
+			document.querySelector(".box6").style.background = "black"	
+			
+	 }
+
+
+		document.querySelector(".box1").onclick = function(){
+			alert("Молодец,ты нашол Неймара")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x=1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box7").style.display = "block"
+			}
+		}
+
+
+		document.querySelector(".box2").onclick = function(){
+			alert("Неправильно")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x<1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box8").style.display = "block"
+			}
+		}
+
+
+		document.querySelector(".box3").onclick = function(){
+			alert("Неправильно")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x<1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box8").style.display = "block"
+			}
+		}
+
+
+		document.querySelector(".box4").onclick = function(){
+			alert("Неправильно")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x<1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box8").style.display = "block"
+			}
+		}
+
+		document.querySelector(".box5").onclick = function(){
+			alert("Неправильно")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x<1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box8").style.display = "block"
+			}
+		}
+
+
+		document.querySelector(".box6").onclick = function(){
+			alert("Неправильно")
+			x = x - 1
+			document.querySelector(".text").innerHTML = x 
+			if (x>1) {
+				document.querySelector(".main").style.display = "none"
+				document.querySelector(".box8").style.display = "block"
+			}
+		}
+
+
+
+
+	</script>
+	 
+
+	</body>
+	</html>
